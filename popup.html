@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Twitter Filter</h1>
+
+    <div class="field toggle-field">
+      <label for="enabled">Enable filtering</label>
+      <input type="checkbox" id="enabled" checked>
+    </div>
+
+    <div class="field">
+      <label for="apiProvider">API Provider</label>
+      <select id="apiProvider">
+        <option value="openai">OpenAI</option>
+        <option value="openrouter">OpenRouter</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="apiKey">API Key</label>
+      <input type="password" id="apiKey" placeholder="sk-...">
+    </div>
+
+    <div class="field" id="modelTextField">
+      <label for="model">Model</label>
+      <input type="text" id="model" placeholder="gpt-4o-mini">
+    </div>
+
+    <div class="field" id="modelSelectField" style="display: none;">
+      <label for="modelSelect">Model</label>
+      <select id="modelSelect">
+        <option value="google/gemini-2.0-flash-001">Gemini 2.0 Flash</option>
+        <option value="google/gemini-2.5-flash-preview">Gemini 2.5 Flash</option>
+        <option value="anthropic/claude-3.5-haiku">Claude 3.5 Haiku</option>
+        <option value="anthropic/claude-sonnet-4">Claude Sonnet 4</option>
+        <option value="openai/gpt-4o-mini">GPT-4o Mini</option>
+        <option value="openai/gpt-4o">GPT-4o</option>
+        <option value="deepseek/deepseek-chat-v3-0324">DeepSeek V3</option>
+        <option value="meta-llama/llama-3.3-70b-instruct">Llama 3.3 70B</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="filterPrompt">Filter Criteria</label>
+      <textarea id="filterPrompt" rows="3" placeholder="Is this tweet negative, toxic, or complaining?"></textarea>
+    </div>
+
+    <div class="actions">
+      <button id="clearCache">Clear Cache</button>
+      <span id="status" class="status"></span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
