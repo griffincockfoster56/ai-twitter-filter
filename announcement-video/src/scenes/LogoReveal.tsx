@@ -71,8 +71,8 @@ export const LogoReveal = () => {
       <div
         style={{
           position: 'absolute',
-          width: 500,
-          height: 500,
+          width: 900,
+          height: 900,
           borderRadius: '50%',
           background:
             'radial-gradient(circle, rgba(29,155,240,0.15) 0%, rgba(29,155,240,0) 70%)',
@@ -92,8 +92,8 @@ export const LogoReveal = () => {
       <Img
         src={staticFile('full-icon-nobg.png')}
         style={{
-          width: 320,
-          height: 320,
+          width: 750,
+          height: 750,
           objectFit: 'contain',
           transform: `scale(${logoScale}) rotate(${logoRotation}deg)`,
         }}
