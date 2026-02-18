@@ -5,3 +5,4 @@ node_modules/
 !announcement-video/public/*.png
 !filtering-tweets.png
 !filtered-tweets.png
+!announcement-video/out/screenshot-*.png
