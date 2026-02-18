@@ -46,12 +46,22 @@
     </div>
 
     <div class="field">
+      <label for="savedFilters">Saved Filters</label>
+      <div class="saved-filters-row">
+        <select id="savedFilters">
+          <option value="" disabled selected>Load a saved filter...</option>
+        </select>
+        <button id="deleteSavedFilter" class="icon-btn" title="Delete selected filter">&#x2715;</button>
+      </div>
+    </div>
+
+    <div class="field">
       <label for="filterPrompt">Filter Criteria</label>
       <textarea id="filterPrompt" rows="3" placeholder="Is this tweet negative, toxic, or complaining?"></textarea>
     </div>
 
     <div class="actions">
-      <button id="clearCache">Clear Cache</button>
+      <button id="saveFilter">Save Filter</button>
       <span id="status" class="status"></span>
     </div>
   </div>
