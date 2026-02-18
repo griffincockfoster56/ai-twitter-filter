@@ -6,8 +6,8 @@
 
 body {
   width: 320px;
-  background: #15202b;
-  color: #e7e9ea;
+  background: #ffffff;
+  color: #1a1a2e;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 14px;
 }
@@ -16,11 +16,24 @@ body {
   padding: 16px;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.header img {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
 h1 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 16px;
-  color: #e7e9ea;
+  color: #1d9bf0;
 }
 
 .field {
@@ -36,7 +49,7 @@ h1 {
 label {
   display: block;
   font-size: 13px;
-  color: #8b98a5;
+  color: #5b7083;
   margin-bottom: 4px;
 }
 
@@ -50,10 +63,10 @@ select,
 textarea {
   width: 100%;
   padding: 8px 10px;
-  background: #1e2d3d;
-  border: 1px solid #38444d;
+  background: #f7f9fa;
+  border: 1px solid #cfd9de;
   border-radius: 6px;
-  color: #e7e9ea;
+  color: #1a1a2e;
   font-size: 13px;
   font-family: inherit;
   outline: none;
@@ -64,6 +77,7 @@ input[type="password"]:focus,
 select:focus,
 textarea:focus {
   border-color: #1d9bf0;
+  box-shadow: 0 0 0 2px rgba(29, 155, 240, 0.15);
 }
 
 textarea {
@@ -121,9 +135,9 @@ button:hover {
 
 .icon-btn {
   padding: 6px 10px;
-  background: #1e2d3d;
-  color: #8b98a5;
-  border: 1px solid #38444d;
+  background: #f7f9fa;
+  color: #5b7083;
+  border: 1px solid #cfd9de;
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
@@ -133,5 +147,5 @@ button:hover {
 .icon-btn:hover {
   color: #f4212e;
   border-color: #f4212e;
-  background: #1e2d3d;
+  background: #fef2f2;
 }

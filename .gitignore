@@ -1,2 +1,7 @@
+node_modules/
+
 *.png
 !icons/*.png
+!announcement-video/public/*.png
+!filtering-tweets.png
+!filtered-tweets.png
