@@ -149,3 +149,24 @@ button:hover {
   border-color: #f4212e;
   background: #fef2f2;
 }
+
+.notice {
+  background: #e8f5fd;
+  border: 1px solid #1d9bf0;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 14px;
+}
+
+.notice strong {
+  display: block;
+  color: #1d9bf0;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.notice p {
+  font-size: 12px;
+  color: #536471;
+  line-height: 1.4;
+}

@@ -16,6 +16,7 @@ const els = {
   modelTextField: document.getElementById("modelTextField"),
   modelSelect: document.getElementById("modelSelect"),
   modelSelectField: document.getElementById("modelSelectField"),
+  apiKeyNotice: document.getElementById("apiKeyNotice"),
   savedFilters: document.getElementById("savedFilters"),
   deleteSavedFilter: document.getElementById("deleteSavedFilter"),
   filterPrompt: document.getElementById("filterPrompt"),
@@ -67,6 +68,7 @@ chrome.storage.sync.get(DEFAULT_SETTINGS, (settings) => {
   els.filterPrompt.value = settings.filterPrompt;
 
   updateModelVisibility(settings.apiProvider);
+  els.apiKeyNotice.style.display = settings.apiKey ? "none" : "block";
 
   if (settings.apiProvider === "openrouter") {
     els.modelSelect.value = settings.model;
@@ -100,6 +102,7 @@ els.apiProvider.addEventListener("change", () => {
 
 els.apiKey.addEventListener("change", () => {
   save("apiKey", els.apiKey.value);
+  els.apiKeyNotice.style.display = els.apiKey.value ? "none" : "block";
 });
 
 els.model.addEventListener("change", () => {
