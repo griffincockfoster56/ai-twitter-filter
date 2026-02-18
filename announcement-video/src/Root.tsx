@@ -5,6 +5,8 @@ import {
   Screenshot2_Filtering,
   Screenshot3_Filtered,
   Screenshot4_Features,
+  SmallPromoTile,
+  MarqueePromoTile,
 } from './StoreScreenshots';
 
 export const RemotionRoot = () => {
@@ -49,6 +51,22 @@ export const RemotionRoot = () => {
         fps={1}
         width={1280}
         height={800}
+      />
+      <Composition
+        id="small-promo-tile"
+        component={SmallPromoTile}
+        durationInFrames={1}
+        fps={1}
+        width={440}
+        height={280}
+      />
+      <Composition
+        id="marquee-promo-tile"
+        component={MarqueePromoTile}
+        durationInFrames={1}
+        fps={1}
+        width={1400}
+        height={560}
       />
     </>
   );

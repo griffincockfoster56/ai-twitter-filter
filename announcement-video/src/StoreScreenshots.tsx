@@ -240,6 +240,159 @@ const FEATURES = [
   {icon: '🔓', title: 'Fully Open Source', desc: 'Transparent code you can inspect and trust'},
 ];
 
+export const SmallPromoTile = () => {
+  return (
+    <AbsoluteFill
+      style={{
+        background: 'linear-gradient(135deg, #e8f5fd 0%, #ffffff 50%, #f0f8ff 100%)',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Img
+        src={staticFile('full-icon-nobg.png')}
+        style={{
+          position: 'absolute',
+          right: 20,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: 180,
+          height: 180,
+          objectFit: 'contain',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          left: 30,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          maxWidth: 220,
+        }}
+      >
+        <div
+          style={{
+            fontSize: 28,
+            fontWeight: 800,
+            color: '#1d9bf0',
+            fontFamily: FONT_FAMILY,
+            letterSpacing: -0.5,
+            lineHeight: 1.15,
+          }}
+        >
+          AI Twitter Filter
+        </div>
+        <div
+          style={{
+            fontSize: 13,
+            color: '#536471',
+            fontFamily: FONT_FAMILY,
+            marginTop: 8,
+            lineHeight: 1.35,
+          }}
+        >
+          Take back control of your timeline
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+export const MarqueePromoTile = () => {
+  return (
+    <AbsoluteFill
+      style={{
+        background: 'linear-gradient(135deg, #e8f5fd 0%, #ffffff 40%, #f0f8ff 100%)',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Img
+        src={staticFile('full-icon-nobg.png')}
+        style={{
+          position: 'absolute',
+          right: 120,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: 360,
+          height: 360,
+          objectFit: 'contain',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          left: 100,
+          top: '50%',
+          transform: 'translateY(-50%)',
+          maxWidth: 700,
+        }}
+      >
+        <div
+          style={{
+            fontSize: 56,
+            fontWeight: 800,
+            color: '#1d9bf0',
+            fontFamily: FONT_FAMILY,
+            letterSpacing: -1,
+            lineHeight: 1.15,
+          }}
+        >
+          AI Twitter Filter
+        </div>
+        <div
+          style={{
+            fontSize: 24,
+            color: '#536471',
+            fontFamily: FONT_FAMILY,
+            marginTop: 14,
+            lineHeight: 1.4,
+          }}
+        >
+          Take back control of your timeline.
+          <br />
+          AI filters out the noise so you don't have to.
+        </div>
+        <div
+          style={{
+            marginTop: 22,
+            display: 'flex',
+            gap: 10,
+          }}
+        >
+          <div
+            style={{
+              background: '#1d9bf0',
+              color: '#ffffff',
+              fontSize: 16,
+              fontWeight: 700,
+              padding: '10px 24px',
+              borderRadius: 30,
+              fontFamily: FONT_FAMILY,
+            }}
+          >
+            Free &amp; Open Source
+          </div>
+          <div
+            style={{
+              background: '#f7f9fa',
+              color: '#536471',
+              fontSize: 16,
+              fontWeight: 600,
+              padding: '10px 24px',
+              borderRadius: 30,
+              border: '1px solid #e1e8ed',
+              fontFamily: FONT_FAMILY,
+            }}
+          >
+            Bring Your Own API Key
+          </div>
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 export const Screenshot4_Features = () => {
   return (
     <AbsoluteFill
