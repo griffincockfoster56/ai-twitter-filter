@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'AI Twitter Filter - Take Back Control of Your Feed',
+  description = 'AI-powered Chrome extension that filters toxic, negative, and unwanted tweets from your X.com timeline using custom prompts and multiple AI models.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL('/assets/screenshots/screenshot-hero.png', Astro.site);
+const installURL = 'https://chromewebstore.google.com/detail/gpgmeejjkhbmepdcffeooijjjdbbdikg?utm_source=item-share-cb';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'AI Twitter Filter',
+  description,
+  applicationCategory: 'BrowserApplication',
+  operatingSystem: 'Chrome',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  featureList: [
+    'AI-powered tweet filtering',
+    'Custom filter prompts',
+    'Multiple AI model support (OpenAI, Anthropic, Google, OpenRouter)',
+    'Real-time timeline filtering',
+    'Privacy-first — your API key stays local',
+  ],
+  installUrl: installURL,
+  author: {
+    '@type': 'Person',
+    name: 'Griffin Cockfoster',
+    url: 'https://github.com/griffincockfoster56',
+  },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Griffin Cockfoster" />
+    <meta name="keywords" content="twitter filter, x.com filter, ai tweet filter, chrome extension, toxic content filter, twitter cleanup, ai moderation" />
+    <meta name="theme-color" content="#1d9bf0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="AI Twitter Filter" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+    <meta name="twitter:url" content={canonicalURL} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
